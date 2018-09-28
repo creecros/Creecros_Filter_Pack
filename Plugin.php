@@ -13,7 +13,9 @@ class Plugin extends Base
             
         //Filter
         $this->container->extend('taskLexer', function($taskLexer, $c) {
-            $taskLexer->withFilter(Task_Subtask_Assignee::getInstance()->setCurrentUserId($c['userSession']->getId()));
+            $taskLexer->withFilter(Task_Subtask_Assignee::::getInstance()
+                    ->setCurrentUserId($c['userSession']->getId())
+                    ->setDatabase($c['db']));
             return $taskLexer;
         });
 
