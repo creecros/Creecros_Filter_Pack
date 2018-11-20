@@ -1,4 +1,4 @@
-# Creecros's Filter Pack
+# :toilet: Creecros's Filter Pack
 
 ## :zap: Make a request :speech_balloon: if you need new filters.
 
