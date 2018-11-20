@@ -120,10 +120,10 @@ class SubtaskStatus extends BaseFilter implements FilterInterface
                 case 'DONE':
                     $subquery->eq(SubtaskModel::TABLE.'.status', 2);
                     break;
-                case 'OPEN':
+                case 'INPROGRESS':
                     $subquery->eq(SubtaskModel::TABLE.'.status', 1);
                     break;
-                case 'RUNNING':
+                case 'TODO':
                     $subquery->eq(SubtaskModel::TABLE.'.status', 0);
                     break;
             }
