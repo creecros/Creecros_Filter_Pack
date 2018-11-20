@@ -1,12 +1,12 @@
 # :toilet: Creecros's Filter Pack
 
-## :zap: Make a request :raising_hand: if you need new filters.
+## :raising_hand: Make a request if you need new filters.
 
-## Task Subtask Assignee Filter
+## :nail_care: Task Subtask Assignee Filter
 
 - Use `task_subtask_assignee:name` to filter for both tasks and subtasks assigned to `name`
 
-## Subtask Status Filter
+## :japanese_ogre: Subtask Status Filter
 
 - Use `subtask:status:DONE` or `subtask:status:2` to filter for both subtasks that are `DONE`
 - Use `subtask:status:TODO` or `subtask:status:0` to filter for both subtasks that are `TODO`
