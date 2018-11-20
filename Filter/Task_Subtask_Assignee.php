@@ -1,6 +1,6 @@
 <?php
 
-namespace Kanboard\Plugin\Task_Subtask_Assignee_Filter\Filter;
+namespace Kanboard\Plugin\Creecros_Filter_Pack\Filter;
 
 use Kanboard\Core\Filter\FilterInterface;
 use Kanboard\Filter\BaseFilter;
