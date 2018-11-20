@@ -11,9 +11,17 @@ class Plugin extends Base
     public function initialize()
     {
             
-        //Filter
+        //Task_Subtask_Assignee Filter
         $this->container->extend('taskLexer', function($taskLexer, $c) {
             $taskLexer->withFilter(Task_Subtask_Assignee::getInstance()
+                    ->setCurrentUserId($c['userSession']->getId())
+                    ->setDatabase($c['db']));
+            return $taskLexer;
+        });
+        
+        //SubtaskStatus Filter
+        $this->container->extend('taskLexer', function($taskLexer, $c) {
+            $taskLexer->withFilter(SubtaskStatus::getInstance()
                     ->setCurrentUserId($c['userSession']->getId())
                     ->setDatabase($c['db']));
             return $taskLexer;
