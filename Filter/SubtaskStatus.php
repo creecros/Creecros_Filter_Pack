@@ -98,7 +98,7 @@ class SubtaskStatus extends BaseFilter implements FilterInterface
         $subquery = $this->db->table(SubtaskModel::TABLE)
             ->columns(
                 SubtaskModel::TABLE.'.status',
-                SubtaskModel::TABLE.'.task_id',
+                SubtaskModel::TABLE.'.task_id'
             );
 
         return $this->applySubQueryFilter($subquery);
