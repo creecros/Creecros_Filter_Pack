@@ -1,9 +1,9 @@
 <?php
 
-namespace Kanboard\Plugin\Task_Subtask_Assignee_Filter;
+namespace Kanboard\Plugin\Creecros_Filter_Pack;
 
 use Kanboard\Core\Plugin\Base;
-use Kanboard\Plugin\Task_Subtask_Assignee_Filter\Filter\Task_Subtask_Assignee;
+use Kanboard\Plugin\Creecros_Filter_Pack\Filter\Task_Subtask_Assignee;
 use PicoDb\Table;
 
 class Plugin extends Base
@@ -23,11 +23,11 @@ class Plugin extends Base
     
     public function getPluginName()
     {
-        return 'Task_Subtask_Assignee_Filter';
+        return 'Creecros_Filter_Pack';
     }
     public function getPluginDescription()
     {
-        return t('Filter');
+        return t('creecros\'s filter pack');
     }
     public function getPluginAuthor()
     {
@@ -35,10 +35,10 @@ class Plugin extends Base
     }
     public function getPluginVersion()
     {
-        return '0.0.1';
+        return '1.1.0';
     }
     public function getPluginHomepage()
     {
-        return 'https://github.com/creecros/Task_Subtask_Assignee_Filter';
+        return 'https://github.com/creecros/Creecros_Filter_Pack';
     }
 }
