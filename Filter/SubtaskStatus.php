@@ -1,11 +1,11 @@
 <?php
 
-namespace Kanboard\Filter;
+namespace Kanboard\Plugin\Creecros_Filter_Pack\Filter;
 
 use Kanboard\Core\Filter\FilterInterface;
+use Kanboard\Filter\BaseFilter;
 use Kanboard\Model\SubtaskModel;
 use Kanboard\Model\TaskModel;
-use Kanboard\Model\UserModel;
 use PicoDb\Database;
 use PicoDb\Table;
 
