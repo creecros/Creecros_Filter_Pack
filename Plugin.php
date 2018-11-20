@@ -4,6 +4,7 @@ namespace Kanboard\Plugin\Creecros_Filter_Pack;
 
 use Kanboard\Core\Plugin\Base;
 use Kanboard\Plugin\Creecros_Filter_Pack\Filter\Task_Subtask_Assignee;
+use Kanboard\Plugin\Creecros_Filter_Pack\Filter\SubtaskStatus;
 use PicoDb\Table;
 
 class Plugin extends Base
