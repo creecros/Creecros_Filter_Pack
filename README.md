@@ -1,5 +1,7 @@
 # Creecros's Filter Pack
 
+## :zap: Make a request :speech_balloon: if you need new filters.
+
 ## Task Subtask Assignee Filter
 
 - Use `task_subtask_assignee:name` to filter for both tasks and subtasks assigned to `name`
