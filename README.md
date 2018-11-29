@@ -4,7 +4,7 @@
 
 ## :nail_care: Task Subtask Assignee Filter
 
-- Use `task_subtask_assignee:name` to filter for both tasks and subtasks assigned to `name`
+- Use `task_subtask_assignee:name` to filter for both tasks and subtasks assigned to `name`, add `status:open` at the end to exclude closed tasks.
 
 ## :japanese_ogre: Subtask Status Filter
 
