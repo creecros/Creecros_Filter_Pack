@@ -13,3 +13,8 @@
 - Use `subtask:status:INPROGRESS` or `subtask:status:1` to filter for subtasks that are `INPROGRESS`
 - Use `subtask:status:RUNNING` to filter for subtasks that are `RUNNING`, regardless of `STATUS`
 
+## :family: Combinable
+
+Example:
+- `task_subtask_assignee:name subtask:status:RUNNING status:open`
+
