@@ -5,6 +5,7 @@ namespace Kanboard\Plugin\Creecros_Filter_Pack;
 use Kanboard\Core\Plugin\Base;
 use Kanboard\Plugin\Creecros_Filter_Pack\Filter\Task_Subtask_Assignee;
 use Kanboard\Plugin\Creecros_Filter_Pack\Filter\SubtaskStatus;
+use Kanboard\Plugin\Creecros_Filter_Pack\Filter\SubtaskAssignee;
 use PicoDb\Table;
 
 class Plugin extends Base
@@ -23,6 +24,14 @@ class Plugin extends Base
         //SubtaskStatus Filter
         $this->container->extend('taskLexer', function($taskLexer, $c) {
             $taskLexer->withFilter(SubtaskStatus::getInstance()
+                    ->setCurrentUserId($c['userSession']->getId())
+                    ->setDatabase($c['db']));
+            return $taskLexer;
+        });
+
+        //SubtaskAssignee Filter
+        $this->container->extend('taskLexer', function($taskLexer, $c) {
+            $taskLexer->withFilter(SubtaskAssignee::getInstance()
                     ->setCurrentUserId($c['userSession']->getId())
                     ->setDatabase($c['db']));
             return $taskLexer;
