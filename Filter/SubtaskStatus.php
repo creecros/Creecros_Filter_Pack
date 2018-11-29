@@ -5,6 +5,7 @@ namespace Kanboard\Plugin\Creecros_Filter_Pack\Filter;
 use Kanboard\Core\Filter\FilterInterface;
 use Kanboard\Filter\BaseFilter;
 use Kanboard\Model\SubtaskModel;
+use Kanboard\Model\SubtaskTimeTrackingModel;
 use Kanboard\Model\TaskModel;
 use PicoDb\Database;
 use PicoDb\Table;
@@ -98,8 +99,10 @@ class SubtaskStatus extends BaseFilter implements FilterInterface
         $subquery = $this->db->table(SubtaskModel::TABLE)
             ->columns(
                 SubtaskModel::TABLE.'.status',
-                SubtaskModel::TABLE.'.task_id'
-            );
+                SubtaskModel::TABLE.'.task_id',
+                SubtaskTimeTrackingModel::TABLE.'.end'
+            )
+        ->join(SubtaskTimeTrackingModel::TABLE, 'subtask_id', 'id', SubtaskModel::TABLE);
 
         return $this->applySubQueryFilter($subquery);
     }
@@ -126,6 +129,9 @@ class SubtaskStatus extends BaseFilter implements FilterInterface
                 case 'TODO':
                     $subquery->eq(SubtaskModel::TABLE.'.status', 0);
                     break;
+                case 'RUNNING':
+                    $subquery->eq(SubtaskTimeTrackingModel::TABLE.'.end', 0);
+                    break; 
             }
         }
 
