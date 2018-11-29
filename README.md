@@ -6,6 +6,10 @@
 
 - Use `task_subtask_assignee:name` to filter for both tasks and subtasks assigned to `name`, add `status:open` at the end to exclude closed tasks.
 
+## :paperclip: Chainable Subtask Assignee Filter
+
+- Use `subtask_assignee:name` to filter subtasks assigned to `name`, chainable to other filters.
+
 ## :japanese_ogre: Subtask Status Filter
 
 - Use `subtask:status:DONE` or `subtask:status:2` to filter for subtasks that are `DONE`
