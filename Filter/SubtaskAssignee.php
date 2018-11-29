@@ -16,7 +16,7 @@ use PicoDb\Table;
  * @package filter
  * @author  Craig Crosby
  */
-class TaskSubtaskAssigneeFilter extends BaseFilter implements FilterInterface
+class SubtaskAssignee extends BaseFilter implements FilterInterface
 {
     /**
      * Database object
