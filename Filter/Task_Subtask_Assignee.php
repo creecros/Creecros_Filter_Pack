@@ -93,8 +93,7 @@ class Task_Subtask_Assignee extends BaseFilter implements FilterInterface
                 UserModel::TABLE.'.name',
                 UserModel::TABLE.'.username'
             )
-            ->join(UserModel::TABLE, 'id', 'user_id', SubtaskModel::TABLE)
-            ->neq(SubtaskModel::TABLE.'.status', SubtaskModel::STATUS_DONE);
+            ->join(UserModel::TABLE, 'id', 'user_id', SubtaskModel::TABLE);
         return $this->applySubQueryFilter($subquery);
     }
     /**
