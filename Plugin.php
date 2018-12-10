@@ -6,13 +6,20 @@ use Kanboard\Core\Plugin\Base;
 use Kanboard\Plugin\Creecros_Filter_Pack\Filter\Task_Subtask_Assignee;
 use Kanboard\Plugin\Creecros_Filter_Pack\Filter\SubtaskStatus;
 use Kanboard\Plugin\Creecros_Filter_Pack\Filter\SubtaskAssignee;
+use Kanboard\Plugin\Creecros_Filter_Pack\Filter\DateWithNull;
 use PicoDb\Table;
 
 class Plugin extends Base
 {
     public function initialize()
     {
-            
+        //DateWithNull Filter
+        $this->container->extend('taskLexer', function($taskLexer, $c) {
+            $taskLexer->withFilter(DateWithNull::getInstance()->setDatabase($c['db'])
+                                                              ->setDateParser($c['dateParser']));
+            return $taskLexer;
+        });
+        
         //Task_Subtask_Assignee Filter
         $this->container->extend('taskLexer', function($taskLexer, $c) {
             $taskLexer->withFilter(Task_Subtask_Assignee::getInstance()
