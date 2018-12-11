@@ -17,6 +17,11 @@
 - Use `subtask:status:INPROGRESS` or `subtask:status:1` to filter for subtasks that are `INPROGRESS`
 - Use `subtask:status:RUNNING` to filter for subtasks that are `RUNNING`, regardless of `STATUS`
 
+## :calendar: Search for tasks by due date and include tasks with empty due date
+
+- Use `date_withnull:<=today` or `date_withnunll:>=YYYY-MM-DD` to filter for tasks by due date and include empty due dates in search
+  - The date must use the ISO 8601 format: YYYY-MM-DD.
+
 ### :family: Combinable
 
 Example:
