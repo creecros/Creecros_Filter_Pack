@@ -1,3 +1,9 @@
+[![Latest release](https://img.shields.io/github/release/creecros/Creecros_Filter_Pack.svg)](https://github.com/creecros/Creecros_Filter_Pack/releases)
+![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/creecros/Creecros_Filter_Pack/graphs/contributors)
+![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)
+![Downloads](https://img.shields.io/github/downloads/creecros/Creecros_Filter_Pack/total.svg)
+
 # :toilet: Creecros's Filter Pack
 
 ### :raising_hand: Make a request if you need new filters.
