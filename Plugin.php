@@ -3,6 +3,7 @@
 namespace Kanboard\Plugin\Creecros_Filter_Pack;
 
 use Kanboard\Core\Plugin\Base;
+use Kanboard\Plugin\Creecros_Filter_Pack\Filter\Tags;
 use Kanboard\Plugin\Creecros_Filter_Pack\Filter\Task_Subtask_Assignee;
 use Kanboard\Plugin\Creecros_Filter_Pack\Filter\SubtaskStatus;
 use Kanboard\Plugin\Creecros_Filter_Pack\Filter\SubtaskAssignee;
@@ -39,6 +40,14 @@ class Plugin extends Base
         //SubtaskAssignee Filter
         $this->container->extend('taskLexer', function($taskLexer, $c) {
             $taskLexer->withFilter(SubtaskAssignee::getInstance()
+                    ->setCurrentUserId($c['userSession']->getId())
+                    ->setDatabase($c['db']));
+            return $taskLexer;
+        });
+
+        //Tags Filter
+        $this->container->extend('taskLexer', function($taskLexer, $c) {
+            $taskLexer->withFilter(Tags::getInstance()
                     ->setCurrentUserId($c['userSession']->getId())
                     ->setDatabase($c['db']));
             return $taskLexer;
