@@ -34,6 +34,6 @@ Example:
 - `task_subtask_assignee:name subtask:status:RUNNING status:open`
 
 
-### Tags
+### :bookmark: Tags
 
 - Use `tags:"<tag>,<tag>"` instead of multiples `tag:` to filter all task with the tag `a` *and* `b`. You can use as many tags you want in `tags:""` but they must be separated by `,`.
