@@ -23,17 +23,17 @@
 - Use `subtask:status:INPROGRESS` or `subtask:status:1` to filter for subtasks that are `INPROGRESS`
 - Use `subtask:status:RUNNING` to filter for subtasks that are `RUNNING`, regardless of `STATUS`
 
-## :calendar: Search for tasks by due date and include tasks with empty due date
+### :calendar: Search for tasks by due date and include tasks with empty due date
 
 - Use `date_withnull:<=today` or `date_withnunll:>=YYYY-MM-DD` to filter for tasks by due date and include empty due dates in search
   - The date must use the ISO 8601 format: YYYY-MM-DD.
+  
+### :bookmark: Tags
+
+- Use `tags:"<tag>,<tag>"` instead of multiples `tag:` to filter all task with the tag `a` *and* `b`. You can use as many tags you want in `tags:""` but they must be separated by `,`.
 
 ### :family: Combinable
 
 Example:
 - `task_subtask_assignee:name subtask:status:RUNNING status:open`
 
-
-### :bookmark: Tags
-
-- Use `tags:"<tag>,<tag>"` instead of multiples `tag:` to filter all task with the tag `a` *and* `b`. You can use as many tags you want in `tags:""` but they must be separated by `,`.
