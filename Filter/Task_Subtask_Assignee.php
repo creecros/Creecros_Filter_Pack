@@ -68,10 +68,16 @@ class Task_Subtask_Assignee extends BaseFilter implements FilterInterface
         } else {
             switch ($this->value) {
                 case 'me':
+                    $this->query->beginOr();
                     $this->query->eq(TaskModel::TABLE.'.owner_id', $this->currentUserId);
+                    $this->query->in(TaskModel::TABLE.'.id', $task_ids);
+                    $this->query->closeOr();
                     break;
                 case 'nobody':
+                    $this->query->beginOr();
                     $this->query->eq(TaskModel::TABLE.'.owner_id', 0);
+                    $this->query->in(TaskModel::TABLE.'.id', $task_ids);
+                    $this->query->closeOr();
                     break;
                 default:
                     $this->query->beginOr();
@@ -83,6 +89,7 @@ class Task_Subtask_Assignee extends BaseFilter implements FilterInterface
         }
         
     }
+
     
     protected function getSubQuery()
     {
